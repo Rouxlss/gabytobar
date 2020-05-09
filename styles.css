@@ -1,0 +1,934 @@
+* {
+    /* font-family: 'Indie Flower', cursive;
+    */
+    padding: 0;
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: white;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 0 8% 0 8%;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #ffffff, #f8f7f8, #f1f0f0, #eae8e9, #e3e1e1);
+}
+
+header .fimg {
+    width: 400px;
+    position: absolute;
+    border-radius: 100%;
+    top: 70px;
+    opacity: 0.2;
+    right: 100px;
+    z-index: 1;
+}
+
+header .img {
+    width: 300px;
+    position: relative;
+    top: 100px;
+    right: 60px;
+    z-index: 2;
+
+}
+
+header .img .play{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 149);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 3;
+}
+
+header .img .pause {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 149);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 3;
+    display: none;
+}
+
+header .img .play i, header .img .pause i {
+    color: white;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+}
+
+header .img .play:hover, header .img .pause:hover {
+    transform: scale(1.1);
+}
+
+.hide {
+   display: none;
+}
+
+header .img img {
+    position: absolute;
+    width: 100%;
+    border-radius: 150%;
+    padding: 4%;
+    /* border: 6px rgb(0, 255, 255) dashed; */
+}
+
+header .img::after {
+    display: block;
+    content: "<i class="far fa-play"></i>";
+    padding: 20%;
+    background: rgb(179, 5, 156);
+    border-radius: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+}
+
+header .textos {
+    width: 50%;
+    position: relative;
+    top: 100px;
+
+}
+
+header .textos h1 {
+    font-size: 60px;
+    position: absolute;
+    top: 50px;
+    font-weight: 900;
+}
+
+header .textos p {
+    color: rgb(71, 71, 71);
+    position: absolute;
+    top: 130px;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+header .textos .links {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+
+header .textos .links p {
+    font-size: 20px;
+    color: rgb(78, 77, 77);
+    position: absolute
+}
+
+header .textos .links a {
+    color: rgb(207, 12, 149);
+    text-decoration: underline;
+}
+
+.flecha {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.flecha a {
+    position: relative;
+    text-align: center;
+    color: rgb(77, 77, 77);
+    animation: chevron infinite 4s;
+}
+
+section {
+    padding: 5%;
+    display: flex;
+}
+
+#biografia {
+    position: relative;
+}
+
+#biografia .fotos {
+    position: relative;
+    left: 150px;
+}
+
+#biografia .fotos img {
+    position: relative;
+    z-index: 2;
+    transition: .4s;
+}
+
+#biografia .fotos img:hover {
+    transform: translateX(30px);
+}
+
+#biografia .texto {
+    width: 40%;
+    margin: auto;
+    position: relative;
+    right: 20px;
+    color: rgb(70, 70, 70);
+    font-size: 18px;
+    background: rgba(201, 201, 201, 0.596);
+    padding: 3%;
+    z-index: 2;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: 100;
+    line-height: 25px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+#biografia .texto::first-letter {
+    font-size: 40px;
+    color: rgb(255, 0, 191);
+}
+
+#biografia .texto:hover {
+    transform: translateX(-30px);
+}
+
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.075);
+    padding: 4%;
+    height: 30vh;
+}
+
+footer .sec {
+    position: relative;
+}
+
+
+footer .sec img {
+    width: 100px;
+    position: relative;
+    top: -20px;
+}
+
+footer .space {
+    position: absolute;
+    bottom: 0;
+    padding: 4%;
+    background: rgb(97, 96, 96);
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+footer .sec a, footer .sec i {
+    position: relative;
+    top: -10px;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgb(63, 63, 63);
+}
+
+/* ad */
+#populares .titulo {
+    text-align: center;
+}
+.tops {
+    width: 100%;
+    margin-bottom: 60px;
+    position: relative;
+    top: 80px;
+}
+
+.tops .top {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.tops .top .img {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    
+    margin-right: 20px;
+}
+.tops .top .img img {
+    width: 100%;
+}
+
+.letras {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tops .top h1, .tops .top p {
+    line-height: 100px;
+}
+
+
+.tops .top h1, .tops .top a {
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.tops .top h6 {
+    position: absolute;
+    left: 112px;
+    color: rgb(148, 146, 146);
+    font-weight: 100;
+    top: 40px;
+    font-size: 16px;
+}
+
+
+#populares {
+    position: relative;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    opacity: 0.7;
+}
+
+
+/* SENCILLOS */
+
+#up {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#up a {
+    background: rgb(0, 81, 255);
+    padding: 0.5% 1%;
+    z-index: 4;
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+}
+
+#up img {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#song {
+    position: relative;
+    padding: 4%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#song .left {
+    width: 30%;
+}
+
+#song .left .img {
+    position: relative;
+    width: 100%;
+    height: 98%;
+    background: black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#song .left .img img:hover{
+    opacity: 0.7;
+}
+
+#song .left:hover img{
+    opacity: 0.7;
+}
+
+#song .left .img img {
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+
+#song .img .play{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(90, 87, 89);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 3;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#song .img .pause {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 0, 149);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 3;
+    display: none;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#song .img .play i, #song .img .pause i {
+    color: white;
+    font-size: 30px;
+    line-height: 100px;
+    text-align: center;
+}
+
+#song .img .play:hover, #song .img .pause:hover {
+    transform: scale(1.1);
+    background: rgb(255, 0, 149);;
+}
+
+
+
+#song .right {
+    width: 50%;
+}
+
+#song .right h3 {
+    color: rgb(255, 0, 200);
+    font-weight: 100;
+
+}
+
+ #song .right span {
+    color: rgb(117, 1, 92);
+    font-weight: 100;
+    text-decoration: underline;
+
+}
+
+#song .right p {
+    width: 50%;
+}
+
+#song .right ul {
+    position: relative;
+    left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#spotify {
+    width: 50%;
+    display: block;
+}
+
+#spotify img {
+    width: 100%;
+    margin: auto;
+}
+
+#spotify p {
+    font-size: 18px;
+    color: rgb(212, 7, 120);
+}
+
+@keyframes chevron {
+    50% {
+        transform: scale(2);
+        color: rgb(218, 5, 154);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+    header {
+        padding: 0 8% 0 8%;
+        display: block;
+        height: 100vh;
+        width: 84%;
+        background-image: linear-gradient(to bottom, #ffffff, #f8f7f8, #f1f0f0, #eae8e9, #e3e1e1);
+    }
+
+    header .fimg {
+        width: 400px;
+        position: absolute;
+        border-radius: 100%;
+        top: 70px;
+        opacity: 0.2;
+        z-index: 1;
+    }
+
+    header .img {
+        width: 200px;
+        position: absolute;
+        top: 100px;
+        right: 60px;
+        z-index: 2;
+    }
+
+    header .img .play{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgb(255, 0, 149);
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .4s;
+        z-index: 3;
+    }
+
+    header .img .pause {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgb(255, 0, 149);
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .4s;
+        z-index: 3;
+        display: none;
+    }
+
+    header .img .play i, header .img .pause i {
+        color: white;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    header .img .play:hover, header .img .pause:hover {
+        transform: scale(1.1);
+    }
+
+    header .img img {
+        position: absolute;
+        width: 100%;
+        border-radius: 150%;
+        padding: 4%;
+        /* border: 6px rgb(0, 255, 255) dashed; */
+    }
+
+    header .img::after {
+        display: block;
+        content: "<i class="far fa-play"></i>";
+        padding: 20%;
+        background: rgb(179, 5, 156);
+        border-radius: 100%;
+        z-index: 100;
+        position: absolute;
+        top: 0px;
+    }
+
+    header .textos {
+        width: 84%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    header .textos h1 {
+        font-size: 30px;
+        position: absolute;
+        top: 300px;
+        font-weight: 900;
+    }
+
+    header .textos p {
+        color: rgb(71, 71, 71);
+        position: absolute;
+        top: 350px;
+        letter-spacing: 5px;
+        font-size: 20px;
+        width: 90%;
+    }
+
+    header .textos .links {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+    }
+
+    header .textos .links p {
+        font-size: 20px;
+        color: rgb(78, 77, 77);
+        position: absolute
+    }
+
+    header .textos .links a {
+        color: rgb(207, 12, 149);
+        text-decoration: underline;
+    }
+
+    .flecha {
+        position: absolute;
+        bottom: 0;
+        background: white;
+        width: 96%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+
+    .flecha a {
+        position: relative;
+        text-align: center;
+        color: rgb(77, 77, 77);
+        animation: chevron infinite 4s;
+    }
+
+    section {
+        padding: 5%;
+        display: block;
+    }
+
+    #biografia {
+        position: relative;
+    }
+
+    #biografia .fotos {
+        position: relative;
+        left: 0;
+    }
+
+    #biografia .fotos img {
+        position: relative;
+        z-index: 2;
+        transition: .4s;
+        width: 100%;
+    }
+
+    #biografia .fotos img:hover {
+        transform: translateX(0px);
+    }
+
+    #biografia .texto {
+        width: 96%;
+        margin: auto;
+        position: relative;
+        right: 0;
+        color: rgb(70, 70, 70);
+        font-size: 18px;
+        background: rgba(201, 201, 201, 0.596);
+        padding: 3%;
+        z-index: 2;
+        text-align: justify;
+        letter-spacing: 1px;
+        font-weight: 100;
+        line-height: 25px;
+        transition: .4s;
+        cursor: pointer;
+    }
+
+    #biografia .texto::first-letter {
+        font-size: 40px;
+        color: rgb(255, 0, 191);
+    }
+
+    #biografia .texto:hover {
+        transform: translateX(-30px);
+    }
+
+
+    footer {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        background: rgba(0, 0, 0, 0.075);
+        padding: 0 4%;
+        width: 92%;
+        height: 30vh;
+    }
+
+    footer .sec {
+        position: relative;
+    }
+
+
+    footer .sec img {
+        width: 80px;
+        position: relative;
+        top: 40px;
+    }
+
+    footer .space {
+        position: absolute;
+        bottom: 0;
+        padding: 4%;
+        background: rgb(97, 96, 96);
+        width: 92%;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .sec a, footer .sec i {
+        position: relative;
+        top: 40px;
+        font-size: 14px;
+        line-height: 25px;
+        color: rgb(63, 63, 63);
+    }
+
+    /* ad */
+    #populares .titulo {
+        text-align: center;
+    }
+
+    .tops {
+        width: 100%;
+        margin-bottom: 60px;
+        position: relative;
+        top: 80px;
+    }
+
+    .tops .top {
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    .tops .top .img {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+
+    .tops .top .img img {
+        width: 100%;
+    }
+
+    .letras {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tops .top h1, .tops .top p {
+        line-height: 100px;
+    }
+
+    .tops .top h1, .tops .top a {
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        line-height: 40px;
+        font-size: 15px;
+    }
+
+    .tops .top h6 {
+        position: absolute;
+        left: 112px;
+        color: rgb(148, 146, 146);
+        font-weight: 100;
+        top: 40px;
+        font-size: 16px;
+    }
+
+    #populares {
+        position: relative;
+    }
+
+    hr {
+        width: 90%;
+        margin: auto;
+        opacity: 0.7;
+    }
+
+    /* SENCILLOS */
+
+    #up {
+        width: 100%;
+        height: 30vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #up a {
+        background: rgb(0, 81, 255);
+        padding: 2%;
+        z-index: 4;
+        font-size: 20px;
+        position: absolute;
+        color: white;
+        border-radius: 10px;
+    }
+    
+
+    #up img {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    #song {
+        position: relative;
+        padding: 4%;
+        display: block;
+        justify-content: space-around;
+    }
+
+    #song .left {
+        width: 100%;
+    }
+
+    #song .left .img {
+        position: relative;
+        width: 100%;
+        height: 20%;
+        background: black;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    #song .left .img img:hover{
+        opacity: 0.7;
+    }
+
+    #song .left:hover img{
+        opacity: 0.7;
+    }
+
+    #song .left .img img {
+        width: 100%;
+        height: 100%;
+        transition: .4s;
+    }
+
+    #song .img .play{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgb(90, 87, 89);
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .4s;
+        z-index: 3;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #song .img .pause {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgb(255, 0, 149);
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .4s;
+        z-index: 3;
+        display: none;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #song .img .play i, #song .img .pause i {
+        color: white;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    #song .img .play:hover, #song .img .pause:hover {
+        transform: scale(1.1);
+        background: rgb(255, 0, 149);;
+    }
+
+    #song .right {
+        width: 50%;
+    }
+
+    #song .right h3 {
+        color: rgb(255, 0, 200);
+        font-weight: 100;
+    }
+
+    #song .right span {
+        color: rgb(117, 1, 92);
+        font-weight: 100;
+        text-decoration: underline;
+    }
+
+    #song .right p {
+        width: 100%;
+    }
+
+    #song .right ul {
+        position: relative;
+        left: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #spotify {
+        width: 90%;
+        display: block;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #spotify img {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    
+}
+
